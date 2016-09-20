@@ -1,0 +1,294 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* ------- BODY ------- */
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #3B3840;
+  color: #CCC;
+  font-family: 'Play', sans-serif;
+}
+
+p,h1,h2,h3,h4,h5 {
+  font-family: 'Cuprum', sans-serif;
+}
+
+
+/* ------- HEADER ------- */
+
+
+.header {
+  min-width: 928px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 20px;
+}
+
+
+/* ------- FOOTER ------- */
+
+
+.footer {
+  padding: 10px;
+  min-width: 928px;
+}
+
+
+
+.main-content {
+  margin: 5px auto;
+	width: 928px;
+  height: 548px;
+  padding: 10px;
+  background: #3B3840;
+}
+
+
+/* ------- GAME FIELD ------- */
+
+
+.game-field-container {
+	float: left;
+  height: 100%;
+  width: 60%;
+  padding-right: 20px;
+}
+
+.game-field {
+  border: 8px solid #262A33;
+  border-collapse: separate;
+  width: 100%;
+  height: 100%;
+}
+
+.game-field td {
+  border: 1px solid #212121;
+}
+
+.live {
+  background: #BBB;
+}
+
+
+/* ------- CONTROL ELEMENTS ------- */
+
+
+.control-elements {
+  float: right;
+  width: 40%;
+}
+
+.control-panel {
+  height: 40px;
+  width: 360px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.control-panel input {
+  display: none;
+}
+
+.control-panel .ctrl-btn {
+  background: #262A33;
+  height: 40px;
+  width: 40px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.control-panel .ctrl-btn:hover {
+  background: #2F3441;
+}
+
+.control-panel img {
+  margin: 4px auto;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+	.control-panel input:checked ~.ctrl-btn img {
+  transform: rotate(180deg);
+}
+
+	.control-panel .ctrl-menu {
+  float: right;
+  width: 320px;
+  left: -313px;
+  position: relative;
+  transition: left 0.5s ease-in-out;
+}
+
+	.control-panel input:checked ~.ctrl-menu {
+  left: 0px;
+}
+
+	.control-panel li {
+  background: #212121;
+  display: inline-block;
+  line-height: 40px;
+  width: 24.9%;
+  text-align: center;
+  cursor: pointer;
+  color: #7F7F7F;
+}
+.control-panel .ctrl-menu {
+  border-right: 6px solid #262A33;
+  background: #181818
+}
+
+.control-panel li:hover {
+  background: #393939;
+	color: #AFAFAF;
+}
+
+.console {
+  border: 4px solid #262A33;
+}
+
+.console-output {
+  padding: 2px 5px;
+  border: none;
+  background: #181818;
+  resize: none;
+  color: #B4B4B4;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  font-family: 'Play', sans-serif;
+  font-size: 0.8em;
+}
+
+.console-input {
+  border: none;
+  background: #212121;
+  color: #B4B4B4;
+  width: 100%;
+  padding: 2px 5px;
+  font-family: 'Play', sans-serif;
+  font-size: 0.8em;
+}
+
+.grid-size-option {
+  width: 100%;
+  background: #262A33;
+  height: 60px;
+  margin-bottom: 10px;
+  
+}
+
+.grid-size-caption {
+  display: block;
+  height: 20px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #181818;
+  color: #AFAFAF;
+  font-size: 0.9em;
+  padding: 2px 0;
+}
+/* .size-option {
+  position: relative;
+  z-index: 1;
+} */
+.grid-size-option div {
+  display: inline-block;
+  line-height: 40px;
+  width: 33.3%;
+  cursor: pointer;
+  text-align: center;
+  color: #7F7F7F;
+  position: relative;
+  z-index: 1;
+  color: #7F7F7F;
+}
+
+.grid-size-option div:hover {
+  color: #AFAFAF;
+}
+
+.grid-size-option div.size-option-checked {
+  color: #AFAFAF;
+}
+
+.grid-size-option .slider {
+  display: block;
+  height: 40px;
+  width: 33.3%;
+  position: relative;
+  top: -40px;
+  left: 0;
+  background: #7F7F7F;
+  z-index: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+#small_size.size-option-checked ~.slider {
+  left: 0;
+}
+
+#medium_size.size-option-checked ~.slider {
+  left: 33.3%;
+}
+
+#large_size.size-option-checked ~.slider {
+  left: 66.6%;
+}

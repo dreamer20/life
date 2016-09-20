@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Клеточный автомат "Жизнь"</title>
+	<meta charset="utf-8"/>
+	<link href='http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cuprum:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/game_life.css">
+</head>
+<body>
+	<header class="header">
+		<h1>Клеточный автомат "Жизнь"</h1>
+	</header>
+	<section class="main-content">
+	<div class="game-field-container">
+		<table id="grid" class="grid game-field">
+
+		</table>
+	</div>
+	<div class="control-elements">
+		<div class="control-panel">
+			<input type="checkbox" id="control-panel" />
+			<label class="ctrl-btn" for="control-panel">
+				<img src="images/1436896336_FEZ-04.svg" width="32"/>
+			</label><!--
+			--><ul id="ctrl_menu" class="ctrl-menu group">
+				<li id="start">Старт</li><!--
+				--><li id="stop">Стоп</li><!--
+				--><li id="step">Шаг</li><!--
+				--><li id="clearGrid">Очистить</li>
+			   </ul>
+		</div>
+
+		<div class="grid-size-option">
+			<span class="grid-size-caption">Сетка</span>
+				<div id="small_size" class="size-option-checked">Маленькая</div><!--
+				--><div id="medium_size">Средняя</div><!--
+				--><div id="large_size">Большая</div><!--
+				-->
+			<!-- </ul> -->
+			<span class="slider"></span>
+		</div>
+		
+
+		<div class="console">
+			<textarea id="console_output" class="console-output"  readonly="true" name="">Справка >> help</textarea>
+			<input id="console_input" class="console-input" type="text">
+		</div>
+						
+	</div>
+		
+	</section>
+	<footer class="footer">
+		<small>&copy Гаврилов Александр gv4alex@gmail.com</small>
+	</footer>
+
+</body>
+<script src="js/game_life.js"></script>
+</html>
